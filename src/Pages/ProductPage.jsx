@@ -15,15 +15,8 @@ function ProductPage(props) {
 			setProduct(response.data);
 		});
 	}, []);
-	useEffect(() => {
-		let localCart = localStorage.getItem("localCart");
-		if (localCart === []) {
-			setCart([]);
-		} else {
-			setCart(JSON.parse(localCart));
-		}
-	}, []);
-	console.log(cart);
+
+	// console.log(cart);
 
 	const handleAddCart = async (item) => {
 		const findItem = cart.find((element) => element.id === item.id);

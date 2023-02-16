@@ -22,7 +22,7 @@ function ProductItems(props) {
 			</div>
 			<div className="container">
 				<div className="product-column">
-					{items.map((product, index) => {
+					{items?.map((product, index) => {
 						return (
 							<div key={index} className="product-item">
 								<div className="product-image">
