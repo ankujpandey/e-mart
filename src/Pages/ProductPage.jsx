@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { icons } from "../icons/Icons";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./ProductPage.css";
 import { CartContext } from "../context/CartContext";
 
@@ -19,7 +19,7 @@ function ProductPage(props) {
 	// console.log(cart);
 
 	const handleAddCart = async (item) => {
-		const findItem = cart.find((element) => element.id === item.id);
+		const findItem = await cart.find((element) => element.id === item.id);
 		if (!findItem) {
 			const update = [...cart, { ...item, qty: 1 }];
 			await setCart([...cart, { ...item, qty: 1 }]);
