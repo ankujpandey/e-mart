@@ -1,0 +1,77 @@
+.header-section {
+	display: flex;
+	height: 70px;
+	align-items: center;
+	justify-content: space-evenly;
+	/* background-color: #b2e27e; */
+	background-image: linear-gradient(to right, #aede7a, #69ad45);
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header-logo-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20%;
+	height: 90%;
+	/* background-color: yellow; */
+}
+
+.header-nav-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 30%;
+	height: 90%;
+	/* background-color: yellow; */
+}
+
+.header-signup-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	height: 90%;
+	/* background-color: yellow; */
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	margin: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	padding: 8px;
+	font-size: large;
+}
+
+a:hover {
+	color: white;
+}
+
+.header-button {
+	margin: 10px;
+}
+
+.MuiSvgIcon-root {
+	padding-right: 5px;
+}
+
+.active {
+	background-image: radial-gradient(#2626267d 20%, #26262600, #ffffff00);
+	color: white;
+	border-radius: 5px;
+}

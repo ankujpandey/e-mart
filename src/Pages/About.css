@@ -1,0 +1,41 @@
+.about {
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	align-items: center;
+	height: 100vh;
+}
+
+.about-us-headline {
+	text-align: center;
+}
+
+.about-details {
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+	/* background-color: tomato; */
+	width: 80%;
+	height: 75%;
+}
+
+.about-details img {
+	width: fit-content;
+	margin-left: 20vw;
+	position: absolute;
+	height: 100%;
+}
+
+.about-txt-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 60%;
+}
+
+.about-txt {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 20px;
+	border-radius: 95px;
+}
