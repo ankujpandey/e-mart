@@ -16,17 +16,23 @@ function ProductPage(props) {
 		});
 	}, []);
 
-	// console.log(cart);
+	// console.log("Adding to product-19---", product);
+	// console.log("Adding to cart----", cart);
 
 	const handleAddCart = async (item) => {
-		const findItem = cart.find((element) => element.id === item.id);
-		if (!findItem) {
-			const update = [...cart, { ...item, qty: 1 }];
-			await setCart([...cart, { ...item, qty: 1 }]);
-			localStorage.setItem("localCart", JSON.stringify(update));
-			// console.log("This is cart ---", item);
+		// console.log("This is cart22 ---", item);
+		// console.log("This is cart24 ---", cart);
+		if (cart != null || cart != undefined) {
+			const findItem = cart && cart.find((element) => element.id === item.id);
+			if (!findItem) {
+				const update = [...cart, { ...item, qty: 1 }];
+				await setCart([...cart, { ...item, qty: 1 }]);
+				localStorage.setItem("localCart", JSON.stringify(update));
+			} else {
+				alert("Already in Cart!");
+			}
 		} else {
-			alert("Already in Cart!");
+			alert("somthing went wrong!!");
 		}
 	};
 

@@ -5,7 +5,7 @@ import "./CartPage.css";
 
 function CartPage(props) {
 	const { cart, setCart } = useContext(CartContext);
-	console.log(cart);
+	// console.log(cart);
 
 	const handleIncrementBtn = async (item) => {
 		const findItem = cart.find((element) => element.id === item.id);

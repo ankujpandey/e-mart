@@ -12,6 +12,8 @@ function ProductItems(props) {
 			.then((res) => setItems(res));
 	}, []);
 
+	console.log("items----", items);
+
 	if (!items) {
 		return <h1 className="loading">Loading...</h1>;
 	}

@@ -13,7 +13,8 @@ export const CartProvider = (props) => {
 	// }, [cart]
 	useEffect(() => {
 		let localCart = localStorage.getItem("localCart");
-		if (localCart === []) {
+		// console.log("....localCart...", localCart);
+		if (localCart == null) {
 			setCart([]);
 		} else {
 			setCart(JSON.parse(localCart));
