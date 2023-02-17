@@ -39,7 +39,7 @@ function Header(props) {
 				<Link to="/cart">
 					<button className="header-button">
 						{icons.shopingCart}
-						Cart({cart === [] ? 0 : cart.length})
+						Cart({cart ? cart.length : 0})
 					</button>
 				</Link>
 			</div>
