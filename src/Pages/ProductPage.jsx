@@ -19,7 +19,7 @@ function ProductPage(props) {
 	// console.log(cart);
 
 	const handleAddCart = async (item) => {
-		const findItem = await cart.find((element) => element.id === item.id);
+		const findItem = cart.find((element) => element.id === item.id);
 		if (!findItem) {
 			const update = [...cart, { ...item, qty: 1 }];
 			await setCart([...cart, { ...item, qty: 1 }]);

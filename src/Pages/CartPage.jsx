@@ -8,7 +8,7 @@ function CartPage(props) {
 	console.log(cart);
 
 	const handleIncrementBtn = async (item) => {
-		const findItem = await cart.find((element) => element.id === item.id);
+		const findItem = cart.find((element) => element.id === item.id);
 		if (findItem) {
 			const updatedProduct = await cart?.map((product) =>
 				product.id === item.id ? { ...product, qty: product.qty + 1 } : product
@@ -19,7 +19,7 @@ function CartPage(props) {
 	};
 
 	const handleDecrementBtn = async (item) => {
-		const findItem = await cart.find((element) => element.id === item.id);
+		const findItem = cart.find((element) => element.id === item.id);
 		let updatedProduct;
 		if (findItem.qty === 1) {
 			updatedProduct = await cart.filter((product) => product.id !== item.id);
