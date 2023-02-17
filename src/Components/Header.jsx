@@ -14,7 +14,7 @@ function Header(props) {
 			<div className="header-nav-section">
 				<ul>
 					<li>
-						<NavLink to="/">Home</NavLink>
+						<NavLink to="/e-mart">Home</NavLink>
 					</li>
 					<li>
 						<NavLink to="/Products">Products</NavLink>
