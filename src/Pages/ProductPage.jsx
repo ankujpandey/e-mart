@@ -7,7 +7,7 @@ import { CartContext } from "../context/CartContext";
 
 function ProductPage(props) {
 	let { id } = useParams();
-	const [product, setProduct] = useState(null);
+	const [product, setProduct] = useState();
 	const { cart, setCart } = useContext(CartContext);
 
 	useEffect(() => {
@@ -41,22 +41,22 @@ function ProductPage(props) {
 		<div>
 			<div className="produc-details-page">
 				<div className="product-img">
-					<img src={product.image} alt="product Image" />
+					<img src={product?.image} alt="product Image" />
 				</div>
 				<div className="about-product">
-					<p className="product-category">{product.category}</p>
-					<h1 className="item-title">{product.title}</h1>
+					<p className="product-category">{product?.category}</p>
+					<h1 className="item-title">{product?.title}</h1>
 					<h4 className="product-ratings">
 						{icons.starIcon}
-						{product.rating.rate}/5
+						{product?.rating.rate}/5
 						{icons.peopleIcon}
-						{product.rating.count}
+						{product?.rating.count}
 					</h4>
 					<h1 className="product-prices">
 						{icons.rupeeIcon}
-						{product.price}
+						{product?.price}
 					</h1>
-					<p>{product.description}</p>
+					<p>{product?.description}</p>
 
 					<button
 						className="add-to-cart"
