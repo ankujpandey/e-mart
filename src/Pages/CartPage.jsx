@@ -38,7 +38,7 @@ function CartPage(props) {
 
 	return (
 		<div className="cart-page">
-			{cart.length > 0 ? (
+			{cart?.length > 0 ? (
 				<div>
 					{cart?.map((product) => (
 						<div>
