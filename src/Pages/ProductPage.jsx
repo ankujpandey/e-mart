@@ -22,7 +22,7 @@ function ProductPage(props) {
 	const handleAddCart = async (item) => {
 		// console.log("This is cart22 ---", item);
 		// console.log("This is cart24 ---", cart);
-		if (cart != null || cart != undefined) {
+		if (cart !== null || cart !== undefined) {
 			const findItem = cart && cart.find((element) => element.id === item.id);
 			if (!findItem) {
 				const update = [...cart, { ...item, qty: 1 }];
